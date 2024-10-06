@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 
-const plugin = require('tailwindcss/plugin');
+import plugin from 'tailwindcss/plugin';
 import { PluginAPI } from 'tailwindcss/types/config';
 
 const config: Config = {

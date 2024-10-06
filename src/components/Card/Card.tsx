@@ -1,8 +1,9 @@
-import Tag from '../Tag/Tag';
+import { type Tag } from '@/models/types';
 
 type CardProps = {
   title: string;
   description: string;
+  tags?: Tag[];
   className?: string;
 };
 

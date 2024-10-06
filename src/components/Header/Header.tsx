@@ -27,7 +27,7 @@ const Header = () => {
     <header className="h-20 flex flex-row justify-between items-center">
       <h1 className="text-xl font-bold">Flexágono</h1>
       <nav>
-        <ul className="flex flex-row gap-5">
+        <ul className="hidden sm:flex flex-row gap-5">
           {navOptions.map((option) => (
             <li key={option.name}>
               <a

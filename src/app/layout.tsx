@@ -33,8 +33,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} antialiased grid grid-cols-4 sm:grid-cols-8 md:grid-cols-12 gap-2 sm:gap-5 min-h-screen `}>
-        <div className="px-4 md:px-0 col-start-1 md:col-start-2 col-span-4 sm:col-span-8 md:col-span-10">
+        className={`${montserrat.className} antialiased grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 lg:gap-5 min-h-screen `}>
+        <div className="px-4 md:px-8 lg:px-0 col-start-1 lg:col-start-2 col-span-4 md:col-span-8 lg:col-span-10">
           <Header />
           {children}
         </div>
