@@ -23,19 +23,19 @@ export default function Home() {
           hecha <span className="underline decoration-[#FFED9D]">fácil!</span>
         </p>
       </div>
-      <div className="self-center flex flex-row items-end gap-2 md:gap-5 justify-center h-1/2 w-full pb-5">
+      <div className=" w-full self-center flex flex-wrap sm:flex-nowrap sm:flex-row items-start sm:items-end gap-2 md:gap-5 justify-center h-2/5 sm:h-1/2 pb-5">
         <Card
-          className="w-1/3 h-4/5 bg-[#DAFFB9]"
+          className="w-full sm:w-1/3 h-[40%] sm:h-4/5 bg-[#DAFFB9]"
           title="Primaria"
           description="hey"
         />
         <Card
-          className="w-1/3 h-full bg-[#FFED9D]"
+          className="w-[48%] sm:w-1/3 h-[60%] sm:h-full self-stretch bg-[#FFED9D]"
           title="Secundaria"
           description="hey"
         />
         <Card
-          className="w-1/3 h-2/3 bg-[#9DE0FF]"
+          className="w-[48%] sm:w-1/3 h-[60%] sm:h-2/3 self-stretch sm:self-auto bg-[#9DE0FF]"
           title="Bachillerato"
           description="hey"
         />
