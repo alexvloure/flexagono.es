@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header/Header';
 import { Montserrat } from 'next/font/google';
+import { Providers } from './providers';
+import Image from 'next/image';
+
+import gradientBg from '@/assets/gradient-bg.jpg';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -21,11 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} antialiased grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-2 lg:gap-5 min-h-screen `}>
-        <div className="px-4 md:px-8 lg:px-0 col-start-1 lg:col-start-2 col-span-4 md:col-span-8 lg:col-span-10">
-          <Header />
-          {children}
+        className={`${montserrat.className} antialiased min-h-screen `}>
+        <Image src={gradientBg} alt="Gradient background" className='fixed w-full h-full inset-0' />
+        <div className="fixed mix-blend-multiply inset-0 z-0">
+          <video className='w-full h-full object-cover' autoPlay loop muted playsInline>
+            <source src="/videos/background.mp4" type='video/mp4' />
+          </video>
         </div>
+        <Header />
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -24,18 +24,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="h-20 flex flex-row justify-between items-center">
+    <header className="relative h-20 w-[1600px] max-w-[90%] mx-auto flex flex-row justify-between items-center">
       <h1 className="text-xl font-bold">Flexágono</h1>
       <nav>
         <ul className="hidden sm:flex flex-row gap-5">
           {navOptions.map((option) => (
             <li key={option.name}>
               <a
-                className={`py-[5px] px-4 border-[1px] rounded-full ${
-                  option.active
-                    ? 'border-[#2f2f2f] text-[#2f2f2f]'
-                    : 'border-[#bbb] text-[#555]'
-                }`}
+                className={`py-[5px] px-4 border-[1px] rounded-full ${option.active
+                  ? 'border-[#2f2f2f] text-[#2f2f2f]'
+                  : 'border-[#bbb] text-[#555]'
+                  }`}
                 href={option.url}>
                 {option.name}
               </a>
