@@ -1,6 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import logo from '@/assets/logo.png';
 
 const Header = () => {
   const location = usePathname();
@@ -25,7 +27,10 @@ const Header = () => {
 
   return (
     <header className="relative h-20 w-[1600px] max-w-[90%] mx-auto flex flex-row justify-between items-center">
-      <h1 className="text-xl font-bold">Flexágono</h1>
+      <div className='flex items-center gap-2'>
+        <Image src={logo} alt="Flexagono logo" width={32} />
+        <h1 className="text-[2rem]">flexágono</h1>
+      </div>
       <nav>
         <ul className="hidden sm:flex flex-row gap-5">
           {navOptions.map((option) => (

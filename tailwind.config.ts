@@ -15,6 +15,9 @@ const config: Config = {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
+      },
     },
   },
   plugins: [
@@ -31,6 +34,11 @@ const config: Config = {
           position: 'absolute',
           width: '100%',
           height: '100%',
+        },
+        '.circle-item': {
+          position: 'absolute',
+          width: '40px',
+          height: '40px',
         },
       });
     }),
