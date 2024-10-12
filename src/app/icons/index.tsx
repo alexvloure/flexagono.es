@@ -19,12 +19,12 @@ import Summation01Icon from './summation-01-stroke-rounded';
 import TanIcon from './tan-stroke-rounded';
 
 enum IconEnum {
-  AcuteIcon = 'AcuteIcon',
-  AlphaIcon = 'AlphaIcon',
-  Coordinate02Icon = 'Coordinate02Icon',
-  CosIcon = 'CosIcon',
-  CubeIcon = 'CubeIcon',
-  FunctionOfXIcon = 'FunctionOfXIcon',
+  // AcuteIcon = 'AcuteIcon',
+  // AlphaIcon = 'AlphaIcon',
+  // Coordinate02Icon = 'Coordinate02Icon',
+  // CosIcon = 'CosIcon',
+  // CubeIcon = 'CubeIcon',
+  // FunctionOfXIcon = 'FunctionOfXIcon',
   MatrixIcon = 'MatrixIcon',
   MinusPlus01Icon = 'MinusPlus01Icon',
   MinusSignIcon = 'MinusSignIcon',
@@ -40,12 +40,12 @@ enum IconEnum {
 }
 
 const mappedIcons: { [key: string]: React.ComponentType<{ className?: string, style?: React.CSSProperties }> } = {
-  AcuteIcon: AcuteIcon,
-  AlphaIcon: AlphaIcon,
-  Coordinate02Icon: Coordinate02Icon,
-  CosIcon: CosIcon,
-  CubeIcon: CubeIcon,
-  FunctionOfXIcon: FunctionOfXIcon,
+  // AcuteIcon: AcuteIcon,
+  // AlphaIcon: AlphaIcon,
+  // Coordinate02Icon: Coordinate02Icon,
+  // CosIcon: CosIcon,
+  // CubeIcon: CubeIcon,
+  // FunctionOfXIcon: FunctionOfXIcon,
   MatrixIcon: MatrixIcon,
   MinusPlus01Icon: MinusPlus01Icon,
   MinusSignIcon: MinusSignIcon,

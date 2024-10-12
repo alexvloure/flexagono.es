@@ -40,6 +40,17 @@ const config: Config = {
           width: '40px',
           height: '40px',
         },
+        '.circle-container': {
+          '--circle-size': '50%',
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderRadius: '9999px',
+          opacity: '0.6',
+        },
       });
     }),
   ],
