@@ -6,50 +6,53 @@ import Card from '@/components/Card/Card';
 
 import cyn_wink from '@/assets/cyn_wink.png';
 import Image from 'next/image';
-// import { Parallax } from 'react-scroll-parallax';
 import MathematicCircle from '@/components/MathematicCircle/MathematicCircle';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function Home() {
-  const parentRef = useRef<HTMLDivElement>(null);
-  const [translateIcon, setTranslateIcon] = useState<number | null>(null);
-
-  const updateTranslateIcon = () => {
-    if (parentRef.current) {
-      setTranslateIcon(parentRef.current.offsetWidth / 2);
-    }
-  };
-
   useEffect(() => {
-    updateTranslateIcon();
-    window.addEventListener('resize', updateTranslateIcon);
-    return () => window.removeEventListener('resize', updateTranslateIcon);
+    const customCursor = document.getElementById('custom-cursor');
+    console.log(customCursor);
+    if (!customCursor) return;
+
+    const updateCursorPosition = (e: MouseEvent) => {
+      customCursor.style.top = `${e.clientY}px`;
+      customCursor.style.left = `${e.clientX}px`;
+    };
+
+    window.addEventListener('mousemove', (event) => {
+      updateCursorPosition(event);
+
+      // if (hoverContainer.matches(':hover')) {
+      //   customCursor.classList.add('zoom');
+      // } else {
+      //   customCursor.classList.remove('zoom');
+      // }
+    });
   }, []);
 
   return (
     <div className="h-full w-[1500px] max-w-[90%] mx-auto flex flex-col justify-between">
       {/* <Parallax speed={-20}> */}
+      <div id="custom-cursor" className="custom-cursor" />
       <div className="min-h-[calc(100dvh_-_80px_-_160px)] flex flex-col justify-between items-center gap-[4.25rem]">
         <div className="mt-14 sm:mt-40 mx-auto z-[1]">
           <h1
-            className={`leading-[normal] text-[5rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] 2xl:text-[12rem] 3xl:text-[13rem] font-[500] ${styles.nohemiRegular}`}>
-            Sólo es ciencia.
+            className={`leading-[86%] tracking-[-1px] text-[5rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] 2xl:text-[12rem] 3xl:text-[13rem] ${styles.nohemiRegular}`}>
+            Todo es ciencia.
           </h1>
-          <p className={`${styles.nohemiRegular} font-[500] text-[1.25rem] sm:text-[2rem]`}>Sube de nivel tus conocimientos</p>
+          <p
+            className={`${styles.nohemiRegular} text-[1.25rem] sm:text-[2rem] mt-4`}>
+            Prepárate para subir de nivel tus conocimientos
+          </p>
         </div>
-        <div
-          ref={parentRef}
-          className="w-[250px] lg:w-[350px] xl:w-[450px] h-[250px] lg:h-[350px] xl:h-[450px] mt-8 relative">
-          {translateIcon && (
-            <>
-              <MathematicCircle translateIcon={translateIcon} />
-              <Image
-                className="w-[50%] h-[50%] absolute top-[25%] left-[25%] rotate-[-15deg]"
-                src={cyn_wink}
-                alt="Cynthia memoji wink"
-              />
-            </>
-          )}
+        <div className="relative w-[300px] lg:w-[400px] xl:w-[500px] h-[300px] lg:h-[400px] xl:h-[500px] mt-8">
+          <MathematicCircle />
+          <Image
+            className="w-[50%] h-[50%] absolute top-[25%] left-[25%] rotate-[-15deg]"
+            src={cyn_wink}
+            alt="Cynthia memoji wink"
+          />
         </div>
       </div>
       {/* </Parallax>
