@@ -16,7 +16,7 @@ const config: Config = {
         foreground: 'var(--foreground)',
       },
       animation: {
-        'spin-slow': 'spin 10s linear infinite',
+        'spin-slow': 'spin 15s linear infinite',
       },
     },
   },
@@ -35,13 +35,7 @@ const config: Config = {
           width: '100%',
           height: '100%',
         },
-        '.circle-item': {
-          position: 'absolute',
-          width: '40px',
-          height: '40px',
-        },
         '.circle-container': {
-          '--circle-size': '50%',
           position: 'relative',
           width: '100%',
           height: '100%',

@@ -29,7 +29,7 @@ const Header = () => {
     <header className="relative h-20 w-[1600px] max-w-[90%] mx-auto flex flex-row justify-between items-center">
       <div className='flex items-center gap-2'>
         <Image src={logo} alt="Flexagono logo" width={32} />
-        <h1 className="text-[2rem]">flexágono</h1>
+        <h1 className={`text-[2rem]`}>flexágono</h1>
       </div>
       <nav>
         <ul className="hidden sm:flex flex-row gap-5">
