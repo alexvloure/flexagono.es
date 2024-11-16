@@ -49,11 +49,11 @@ const config: Config = {
           width: '20px',
           height: '20px',
           borderRadius: '50%',
-          border: '3px solid #143306',
+          backgroundColor: '#064e3b80',
           position: 'fixed',
           top: '0',
           pointerEvents: 'none',
-          mixBlendMode: 'difference',
+          // mixBlendMode: 'difference',
           transition: 'transform 500ms',
         },
       });

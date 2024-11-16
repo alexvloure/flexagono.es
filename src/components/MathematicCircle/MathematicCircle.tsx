@@ -1,5 +1,5 @@
-import { IconEnum, IconComponent } from '@/app/icons';
-import { useParallax } from 'react-scroll-parallax';
+import { IconEnum, IconComponent } from "@/app/icons";
+import { useParallax } from "react-scroll-parallax";
 
 export default function MathematicCircle() {
   const parallax = useParallax<HTMLDivElement>({
@@ -19,10 +19,8 @@ export default function MathematicCircle() {
   });
 
   return (
-    <div ref={parallax.ref} className='w-full h-full'>
-      <div className={`circle-container animate-spin-slow`}>
-        {icons}
-      </div>
+    <div ref={parallax.ref} className="w-full h-full">
+      <div className={`circle-container animate-spin-slow`}>{icons}</div>
     </div>
   );
 }
