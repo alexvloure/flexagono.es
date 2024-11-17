@@ -45,16 +45,18 @@ export default function Home() {
       <div id="custom-cursor" className="custom-cursor" />
       <div className="min-h-[calc(100dvh_-_80px_-_160px)] flex flex-col justify-between items-center gap-[4.25rem]">
         <div className="mt-14 sm:mt-40 mx-auto z-[1]">
-          {/* <h1
-            className={`leading-[86%] tracking-[-1px] text-[5rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] 2xl:text-[12rem] 3xl:text-[13rem] ${styles.nohemiRegular}`}>
-            Todo es ciencia.
-          </h1> */}
-          <GradualSpacing text="Todo es ciencia." />
-          <p
+          <GradualSpacing
+            // words="Todo es ciencia."
+            words="Prepárate para subir de nivel tus conocimientos"
+            wordToBreak={5}
+            // className={`leading-[86%] tracking-[-1px] text-[5rem] md:text-[6rem] lg:text-[8rem] xl:text-[10rem] 2xl:text-[12rem] 3xl:text-[13rem] ${styles.nohemiRegular}`}
+            className={`leading-[86%] tracking-[-1px] text-[2.5rem] md:text-[3rem] lg:text-[4rem] xl:text-[5rem] 2xl:text-[12rem] 3xl:text-[13rem] ${styles.nohemiRegular} font-medium text-[#3c3a34] [text-shadow:0px_1px_3px_rgba(27,37,80,0.14)]`}
+          />
+          {/* <p
             className={`${styles.nohemiRegular} text-[1.25rem] sm:text-[2rem] mt-4`}
           >
             Prepárate para subir de nivel tus conocimientos
-          </p>
+          </p> */}
         </div>
         <div className="relative w-[300px] lg:w-[400px] xl:w-[500px] h-[300px] lg:h-[400px] xl:h-[500px] mt-8">
           <MathematicCircle />
