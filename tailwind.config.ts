@@ -17,6 +17,19 @@ const config: Config = {
       },
       animation: {
         'spin-slow': 'spin 15s linear infinite',
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
+      },
+      keyframes: {
+        orbit: {
+          "0%": {
+            transform:
+              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform:
+              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
       },
     },
   },
@@ -44,17 +57,32 @@ const config: Config = {
           height: '100%',
           opacity: '0.6',
         },
-        '#custom-cursor': {
+        '.sticky-header': {
+          position: 'sticky',
           zIndex: '9999',
-          width: '20px',
-          height: '20px',
-          borderRadius: '50%',
-          backgroundColor: '#064e3b80',
-          position: 'fixed',
-          top: '0',
-          pointerEvents: 'none',
-          // mixBlendMode: 'difference',
-          transition: 'transform 500ms',
+          top: '0.5rem',
+          height: '3.5rem',
+          margin: '0.5rem',
+          marginTop: '0',
+          padding: '1rem',
+          borderRadius: '0.5rem',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          transition: 'background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, backdrop-filter 0.25s ease-in-out', // TODO: fix transition
+        },
+        '.elevated': {
+          backdropFilter: 'blur(20px)',
+          backgroundColor: "rgb(230 227 218 / 50%)",
+          boxShadow: '0px 5px 30px -8px rgba(173, 169, 157, 0.83)',
+        },
+        '@media (min-width: 1280px)': {
+          '.sticky-header': {
+            top: '1rem',
+            height: '4rem',
+            margin: '1rem',
+          },
         },
       });
     }),

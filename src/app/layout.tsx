@@ -25,16 +25,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} max-w-[100dvw] antialiased min-h-screen `}
+        className={`${montserrat.className} max-w-full antialiased min-h-screen `}
       >
         <Image
           src={background}
           alt="Gradient background"
-          className="fixed w-[100dvw] h-full inset-0"
+          className="fixed w-full h-full inset-0"
         />
-        <div className="fixed mix-blend-multiply w-[100dvw] inset-0 z-0">
+        <div className="fixed mix-blend-multiply w-full inset-0 z-0">
           <video
-            className="w-[100dvw] h-full object-cover"
+            className="w-full h-full object-cover"
             autoPlay
             loop
             muted

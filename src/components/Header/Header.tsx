@@ -3,9 +3,12 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import logo from "@/assets/logo.png";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const location = usePathname();
+  const [scrolled, setScrolled] = useState(false);
 
   const navOptions = [
     {
@@ -25,11 +28,27 @@ const Header = () => {
     },
   ];
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    });
+  }, []);
+
   return (
-    <header className="relative h-20 w-[1600px] max-w-[90%] mx-auto flex flex-row justify-between items-center">
+    <header
+      className={cn("sticky-header xl:top-4 xl:h-16 xl:m-4", {
+        elevated: scrolled,
+      })}
+    >
       <div className="flex items-center gap-2">
         <Image src={logo} alt="Flexagono logo" width={32} />
-        <h1 className={`text-[2rem] text-[#3c3a34] font-medium`}>flexágono</h1>
+        <h1 className={`text-[1.5rem] text-[#3c3a34] font-medium`}>
+          flexágono
+        </h1>
       </div>
       <nav>
         <ul className="hidden sm:flex flex-row gap-5">
