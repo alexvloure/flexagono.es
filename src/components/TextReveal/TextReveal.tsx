@@ -9,7 +9,7 @@ type GradualSpacingProps = {
   duration?: number;
   filter?: boolean;
   className?: string;
-  wordToBreak?: number;
+  wordsToBreak?: number[];
 };
 
 export function TextReveal({
@@ -17,11 +17,11 @@ export function TextReveal({
   duration,
   filter = true,
   className,
-  wordToBreak,
+  wordsToBreak,
 }: GradualSpacingProps) {
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(" ");
-  const breakOn = wordToBreak && wordToBreak - 1;
+  const breakOn = wordsToBreak && wordsToBreak?.map((word) => word - 1);
 
   useEffect(() => {
     animate(
@@ -49,7 +49,7 @@ export function TextReveal({
             }}
           >
             {word}
-            {breakOn && breakOn === idx ? <br /> : " "}
+            {breakOn && breakOn.includes(idx) ? <br /> : " "}
           </motion.span>
         ))}
       </motion.div>
@@ -57,13 +57,7 @@ export function TextReveal({
   };
 
   return (
-    <div
-      className={cn(
-        // "flex space-x-1 flex-wrap justify-start md:justify-center",
-        "flex space-x-1 flex-wrap text-center",
-        className
-      )}
-    >
+    <div className={cn("flex space-x-1 flex-wrap text-left", className)}>
       {renderWords()}
     </div>
   );

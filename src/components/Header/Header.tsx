@@ -1,14 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import logo from "@/assets/logo.png";
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+import { Germania_One } from "next/font/google";
+
+const germania_one = Germania_One({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const Header = () => {
   const location = usePathname();
-  const [scrolled, setScrolled] = useState(false);
 
   const navOptions = [
     {
@@ -28,26 +29,12 @@ const Header = () => {
     },
   ];
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    });
-  }, []);
-
   return (
-    <header
-      className={cn("sticky-header xl:top-4 xl:h-16 xl:m-4", {
-        elevated: scrolled,
-      })}
-    >
+    <header className="fixed-header">
       <div className="flex items-center gap-2">
-        <Image src={logo} alt="Flexagono logo" width={32} />
-        <h1 className={`text-[1.5rem] text-[#3c3a34] font-medium`}>
-          flexágono
+        {/* <Image src={logo} alt="Flexagono logo" width={32} /> */}
+        <h1 className={`text-[2.5rem] font-medium ${germania_one.className}`}>
+          F.
         </h1>
       </div>
       <nav>
@@ -55,11 +42,11 @@ const Header = () => {
           {navOptions.map((option) => (
             <li key={option.name}>
               <a
-                className={`py-[5px] px-4 border-[1px] rounded-full ${
-                  option.active
-                    ? "border-[#2f2f2f] text-[#2f2f2f]"
-                    : "border-[#bbb] text-[#555]"
-                }`}
+                // className={`py-[5px] px-4 border-[1px] rounded-full ${
+                //   option.active
+                //     ? "border-[#2f2f2f] text-[#2f2f2f]"
+                //     : "border-[#bbb] text-[#555]"
+                // }`}
                 href={option.url}
               >
                 {option.name}

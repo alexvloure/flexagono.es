@@ -22,7 +22,7 @@ export function MathematicOrbit() {
   }, [isSmallScreen]);
 
   return (
-    <div className="relative flex justify-center items-center h-[500px] w-full mt-8">
+    <div className="absolute top-0 right-0 flex justify-center items-center h-[500px] w-full mt-8">
       <Image
         className={`${imgWidth} absolute mb-4 mr-4 rotate-[-15deg]`}
         width={imgWidth}

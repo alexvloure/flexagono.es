@@ -57,25 +57,17 @@ const config: Config = {
           height: '100%',
           opacity: '0.6',
         },
-        '.sticky-header': {
-          position: 'sticky',
+        '.fixed-header': {
+          position: 'fixed',
           zIndex: '9999',
-          top: '0.5rem',
+          width: '100%',
+          top: '0',
           height: '3.5rem',
-          margin: '0.5rem',
-          marginTop: '0',
           padding: '1rem',
-          borderRadius: '0.5rem',
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          transition: 'background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, backdrop-filter 0.25s ease-in-out', // TODO: fix transition
-        },
-        '.elevated': {
-          backdropFilter: 'blur(20px)',
-          backgroundColor: "rgb(230 227 218 / 50%)",
-          boxShadow: '0px 5px 30px -8px rgba(173, 169, 157, 0.83)',
         },
         '@media (min-width: 1280px)': {
           '.sticky-header': {
@@ -84,6 +76,12 @@ const config: Config = {
             margin: '1rem',
           },
         },
+        '.line-height-small': {
+          lineHeight: '1.15',
+        },
+        '.mix-blend-transition': {
+          transition: 'mix-blend-mode 0.5s',
+        }
       });
     }),
   ],

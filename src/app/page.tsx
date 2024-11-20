@@ -1,30 +1,40 @@
 "use client";
 
-import styles from "./fonts/fonts.module.css";
-
 import Card from "@/components/Card/Card";
 
-// import cyn_wink from "@/assets/cyn_wink.png";
-// import Image from "next/image";
-// import MathematicCircle from "@/components/MathematicCircle/MathematicCircle";
 import { TextReveal } from "@/components/TextReveal/TextReveal";
-// import { OrbitingCircles } from "@/components/ui/OrbitingCircles";
-import { MathematicOrbit } from "@/components/MathematicOrbit/MathematicOrbit";
+// import { MathematicOrbit } from "@/components/MathematicOrbit/MathematicOrbit";
+import { nohemiRegular } from "./fonts";
 
 export default function Home() {
   return (
-    <div className="h-full w-[1500px] max-w-[90%] overflow-x-hidden mx-auto flex flex-col justify-between">
+    <div className="h-full relative z-[1] overflow-x-hidden mx-auto flex flex-col justify-between">
       {/* <div id="custom-cursor" className="custom-cursor" /> */}
-      <div className="min-h-[calc(100svh_-_56px_-_160px)] flex flex-col justify-between items-center gap-[4.25rem]">
-        <div className="mt-14 sm:mt-28 mx-auto z-[1]">
-          <TextReveal
-            words="Prepárate para subir de nivel tus conocimientos."
-            wordToBreak={5}
-            className={`leading-[86%] tracking-[-1px] text-[2.5rem] md:text-[3rem] lg:text-[4rem] xl:text-[5rem] 2xl:text-[12rem] 3xl:text-[13rem] ${styles.nohemiRegular} font-medium text-[#3c3a34] [text-shadow:0px_1px_3px_rgba(27,37,80,0.14)]`}
-          />
+      <div className="relative min-h-[calc(100svh)] bg-[#fff3de] flex items-end">
+        <div className="absolute mix-blend-multiply w-full inset-0 z-0">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/videos/background.mp4" type="video/mp4" />
+          </video>
         </div>
-        <MathematicOrbit />
-        {/* <div className="relative w-[300px] lg:w-[400px] xl:w-[500px] h-[300px] lg:h-[400px] xl:h-[500px] mt-8">
+        <div className="w-[1600px] max-w-[90%] mx-auto">
+          {/* <MathematicOrbit /> */}
+          <div className="my-32 sm:mt-32 sm:mb-12 z-[1] w-full md:w-[65%]">
+            <TextReveal
+              words="Prepárate para subir de nivel tus conocimientos."
+              // words="Sube de nivel tus conocimientos."
+              wordsToBreak={[2, 5]}
+              className={`line-height-small tracking-[-1px] text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] ${nohemiRegular.className} font-medium [text-shadow:0px_1px_3px_rgba(27,37,80,0.14)]`}
+            />
+          </div>
+        </div>
+      </div>
+      {/* <div className="relative w-[300px] lg:w-[400px] xl:w-[500px] h-[300px] lg:h-[400px] xl:h-[500px] mt-8">
           <MathematicCircle />
           <Image
             className="w-[50%] h-[50%] absolute top-[25%] left-[25%] rotate-[-15deg]"
@@ -32,8 +42,7 @@ export default function Home() {
             alt="Cynthia memoji wink"
           />
         </div> */}
-      </div>
-      <div className="flex relative h-[100dvh]">
+      <div className="flex relative h-[100svh] bg-[#151515]">
         <div className="w-full h-[80%] self-center flex flex-wrap sm:flex-nowrap sm:flex-row items-start sm:items-end gap-2 md:gap-5 justify-center pb-5">
           <Card
             className="w-full sm:w-1/3 h-[40%] sm:h-4/5 bg-white"

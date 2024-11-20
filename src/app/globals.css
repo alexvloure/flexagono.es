@@ -5,8 +5,10 @@
 :root {
   /* --background: #ffffff; */
   /* --background: #FAF6EF; */
-  --background: #fff3de;
-  --foreground: #171717;
+  /* --background: #fff3de; */
+  --background: #000000;
+  /* --foreground: #171717; */
+  --foreground: #3c3a34;
 }
 
 /* @media (prefers-color-scheme: dark) {

@@ -3,9 +3,9 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import { Montserrat } from "next/font/google";
 import { Providers } from "./providers";
-import Image from "next/image";
+// import Image from "next/image";
 
-import background from "@/assets/background.jpg";
+// import background from "@/assets/background.jpg";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -27,22 +27,13 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} max-w-full antialiased min-h-screen `}
       >
-        <Image
+        {/* <Image
           src={background}
           alt="Gradient background"
-          className="fixed w-full h-full inset-0"
-        />
-        <div className="fixed mix-blend-multiply w-full inset-0 z-0">
-          <video
-            className="w-full h-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="/videos/background.mp4" type="video/mp4" />
-          </video>
-        </div>
+          className="fixed w-full h-full inset-0 mix-blend-normal mix-blend-transition"
+          id="background-img"
+        /> */}
+
         <Header />
         <Providers>{children}</Providers>
       </body>
