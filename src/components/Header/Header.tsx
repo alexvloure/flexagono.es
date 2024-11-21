@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { nohemiRegular } from "@/app/fonts";
 import { Germania_One } from "next/font/google";
 
 const germania_one = Germania_One({
@@ -30,31 +31,21 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed-header">
-      <div className="flex items-center gap-2">
-        {/* <Image src={logo} alt="Flexagono logo" width={32} /> */}
-        <h1 className={`text-[2.5rem] font-medium ${germania_one.className}`}>
-          F.
+    <header className="h-16 fixed top-0 w-full z-[9999]">
+      <div className="h-full max-w-[95%] mx-auto px-2 flex justify-between items-center">
+        <h1 className={`text-[2rem] font-medium ${nohemiRegular.className}`}>
+          Flexágono
         </h1>
+        <nav>
+          <ul className="hidden sm:flex flex-row gap-5">
+            {navOptions.map((option) => (
+              <li key={option.name}>
+                <a href={option.url}>{option.name}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul className="hidden sm:flex flex-row gap-5">
-          {navOptions.map((option) => (
-            <li key={option.name}>
-              <a
-                // className={`py-[5px] px-4 border-[1px] rounded-full ${
-                //   option.active
-                //     ? "border-[#2f2f2f] text-[#2f2f2f]"
-                //     : "border-[#bbb] text-[#555]"
-                // }`}
-                href={option.url}
-              >
-                {option.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </header>
   );
 };

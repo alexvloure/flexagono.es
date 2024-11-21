@@ -3,14 +3,13 @@
 import Card from "@/components/Card/Card";
 
 import { TextReveal } from "@/components/TextReveal/TextReveal";
-// import { MathematicOrbit } from "@/components/MathematicOrbit/MathematicOrbit";
 import { nohemiRegular } from "./fonts";
 
 export default function Home() {
   return (
     <div className="h-full relative z-[1] overflow-x-hidden mx-auto flex flex-col justify-between">
       {/* <div id="custom-cursor" className="custom-cursor" /> */}
-      <div className="relative min-h-[calc(100svh)] bg-[#fff3de] flex items-end">
+      <div className="relative min-h-[100svh] bg-[#fff3de] flex items-end">
         <div className="absolute mix-blend-multiply w-full inset-0 z-0">
           <video
             className="w-full h-full object-cover"
@@ -21,27 +20,22 @@ export default function Home() {
           >
             <source src="/videos/background.mp4" type="video/mp4" />
           </video>
-        </div>
-        <div className="w-[1600px] max-w-[90%] mx-auto">
-          {/* <MathematicOrbit /> */}
-          <div className="my-32 sm:mt-32 sm:mb-12 z-[1] w-full md:w-[65%]">
-            <TextReveal
-              words="Prepárate para subir de nivel tus conocimientos."
-              // words="Sube de nivel tus conocimientos."
-              wordsToBreak={[2, 5]}
-              className={`line-height-small tracking-[-1px] text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] ${nohemiRegular.className} font-medium [text-shadow:0px_1px_3px_rgba(27,37,80,0.14)]`}
-            />
+        </div>{" "}
+        <div className="w-full min-h-[100svh]">
+          <div className="h-16 border-b-[1px] border-[#3c3a3437]">
+            <div className="h-16 w-[95%] mx-auto border-x-[1px] border-[#3c3a3437]" />
+          </div>
+          <div className="w-[95%] min-h-[calc(100svh_-64px)] flex items-end mx-auto px-2 border-x-[1px] border-[#3c3a3437]">
+            <div className="my-32 sm:mt-32 sm:mb-12 z-[1] w-full md:w-[65%]">
+              <TextReveal
+                words="Prepárate para subir de nivel tus conocimientos."
+                wordsToBreak={[2, 5]}
+                className={`line-height-small tracking-[-1px] text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] ${nohemiRegular.className} font-medium [text-shadow:0px_1px_3px_rgba(27,37,80,0.14)]`}
+              />
+            </div>
           </div>
         </div>
       </div>
-      {/* <div className="relative w-[300px] lg:w-[400px] xl:w-[500px] h-[300px] lg:h-[400px] xl:h-[500px] mt-8">
-          <MathematicCircle />
-          <Image
-            className="w-[50%] h-[50%] absolute top-[25%] left-[25%] rotate-[-15deg]"
-            src={cyn_wink}
-            alt="Cynthia memoji wink"
-          />
-        </div> */}
       <div className="flex relative h-[100svh] bg-[#151515]">
         <div className="w-full h-[80%] self-center flex flex-wrap sm:flex-nowrap sm:flex-row items-start sm:items-end gap-2 md:gap-5 justify-center pb-5">
           <Card

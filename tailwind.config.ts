@@ -62,18 +62,17 @@ const config: Config = {
           zIndex: '9999',
           width: '100%',
           top: '0',
-          height: '3.5rem',
-          padding: '1rem',
+          height: '4rem',
+          // padding: '1rem 2rem',
+          padding: '1rem 0',
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
         },
-        '@media (min-width: 1280px)': {
-          '.sticky-header': {
-            top: '1rem',
-            height: '4rem',
-            margin: '1rem',
+        '@media (max-width: 780px)': {
+          '.fixed-header': {
+            // padding: '1rem'
           },
         },
         '.line-height-small': {

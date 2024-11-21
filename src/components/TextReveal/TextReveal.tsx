@@ -57,7 +57,7 @@ export function TextReveal({
   };
 
   return (
-    <div className={cn("flex space-x-1 flex-wrap text-left", className)}>
+    <div className={cn("flex space-x-1 flex-wrap", className)}>
       {renderWords()}
     </div>
   );
