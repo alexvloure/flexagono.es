@@ -80,6 +80,15 @@ const config: Config = {
         },
         '.mix-blend-transition': {
           transition: 'mix-blend-mode 0.5s',
+        },
+        '.photo-bg-container': {
+          position: 'absolute',
+          top: '0',
+          overflow: 'hidden',
+          marginTop: '64px',
+        },
+        '.blend-image': {
+          maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 95%)',
         }
       });
     }),
