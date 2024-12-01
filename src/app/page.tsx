@@ -22,11 +22,8 @@ export default function Home() {
           </video>
         </div>{" "}
         <div className="w-full min-h-[100svh]">
-          <div className="h-16 border-b-[1px] border-[#3c3a3437]">
-            <div className="h-16 w-[95%] mx-auto border-x-[1px] border-[#3c3a3437]" />
-          </div>
-          <div className="w-[95%] min-h-[calc(100svh_-64px)] flex items-end mx-auto px-2 border-x-[1px] border-[#3c3a3437]">
-            <div className="my-32 sm:mt-32 sm:mb-12 z-[1] w-full md:w-[65%]">
+          <div className="w-[95%] min-h-[calc(100svh_-64px)] mt-16 flex items-end mx-auto px-2">
+            <div className="my-32 sm:mt-32 sm:mb-12 z-[1] w-full">
               <TextReveal
                 words="Prepárate para subir de nivel tus conocimientos."
                 wordsToBreak={[2, 5]}

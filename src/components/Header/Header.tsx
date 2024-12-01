@@ -34,7 +34,7 @@ const Header = () => {
     <header className="h-16 fixed top-0 w-full z-[9999]">
       <div className="h-full max-w-[95%] mx-auto px-2 flex justify-between items-center">
         <h1 className={`text-[2rem] font-medium ${nohemiRegular.className}`}>
-          Flexágono
+          flexágono
         </h1>
         <nav>
           <ul className="hidden sm:flex flex-row gap-5">
