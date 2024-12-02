@@ -13,7 +13,7 @@ export default function Home() {
       <div className="relative min-h-[100svh] bg-[#151515] flex items-end">
         <div className="w-full min-h-[100svh]">
           <div className="w-[95%] min-h-[calc(100svh_-64px)] mt-16 flex items-center mx-auto px-2">
-            <PhotoBg className="max-w-[95%] w-[calc(100%_-32px)] sm:w-[50%] h-[50%] sm:h-[calc(100svh_-64px)] mx-auto sm:mx-[none] mix-blend-color-dodge" />
+            <PhotoBg className="max-w-[95%] w-[calc(100%_-32px)] sm:w-[50%] h-[50%] sm:h-[calc(100svh_-64px)] mx-auto mix-blend-color-dodge" />
             <div className="z-[1] w-full">
               <TextReveal
                 words="Prepárate para subir de nivel tus conocimientos."
@@ -24,23 +24,30 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex relative h-[100svh] bg-[#151515]">
-        <div className="w-full h-[80%] self-center flex flex-wrap sm:flex-nowrap sm:flex-row items-start sm:items-end gap-2 md:gap-5 justify-center pb-5">
-          <Card
-            className="w-full sm:w-1/3 h-[40%] sm:h-4/5 bg-white"
-            title="Primaria"
-            description="hey"
-          />
-          <Card
-            className="w-[48%] sm:w-1/3 h-[60%] sm:h-full self-stretch bg-white"
-            title="Secundaria"
-            description="hey"
-          />
-          <Card
-            className="w-[48%] sm:w-1/3 h-[60%] sm:h-2/3 self-stretch sm:self-auto bg-white"
-            title="Bachillerato"
-            description="hey"
-          />
+      <div className="flex relative h-[calc(100svh_-64px)] w-[95%] mx-auto px-2">
+        <div className="w-full sm:mt-28 flex flex-col">
+          <div
+            className={`text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] ${nohemiRegular.className}`}
+          >
+            cursos
+          </div>
+          <div className="w-full h-full flex flex-col lg:flex-row gap-5 pb-10">
+            <Card
+              className="w-full"
+              title="Primaria"
+              description="Si estás empezando con las mates, no te quedes atrás! Avanza y consigue destacar."
+            />
+            <Card
+              className="w-full"
+              title="Secundaria"
+              description="Llega a bachillerato en buena forma, forja tu camino y afianza tus conocimientos!"
+            />
+            <Card
+              className="w-full"
+              title="Bachillerato"
+              description="Necesitas ese impulso extra para afrontar la selectividad? Estás en el sitio adecuado."
+            />
+          </div>
         </div>
       </div>
     </div>
