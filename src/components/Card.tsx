@@ -14,7 +14,7 @@ export default function Card({ title, description, className }: CardProps) {
     >
       <div className="flex flex-col justify-between gap-10">
         <p className="text-xl sm:text-2xl">{title}</p>
-        <p className="text-gray-300 text-lg">{description}</p>
+        <p className="text-lg">{description}</p>
       </div>
     </div>
   );

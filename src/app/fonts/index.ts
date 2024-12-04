@@ -5,4 +5,9 @@ const nohemiRegular = localFont({
     display: "swap",
 })
 
-export { nohemiRegular };
+const nohemiVariable = localFont({
+    src: "./Nohemi-VF.ttf",
+    display: "swap",
+});
+
+export { nohemiRegular, nohemiVariable };
