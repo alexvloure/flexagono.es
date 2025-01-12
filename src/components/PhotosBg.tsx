@@ -7,15 +7,15 @@ type PhotoBgProps = {
   className?: string;
 };
 
-export function PhotosBg({ className }: PhotoBgProps) {
+export function Photos({ className }: PhotoBgProps) {
   const handleMapClick = () => {
     window.open("https://maps.app.goo.gl/Jrxy2h8hhcWMA4SW8", "_blank");
   };
 
   return (
-    <div className={cn(className, "absolute")}>
+    <div className={cn(className)}>
       <Image
-        className="absolute cursor-pointer object-cover bottom-24 md:bottom-14 left-4 h-[150px] md:h-[250px] w-auto aspect-[12/16] rounded-xl hover:scale-[101%] hover:rotate-[-2deg] transition-all"
+        className="absolute opacity-85 cursor-pointer object-cover bottom-16 md:bottom-14 left-4 h-[180px] md:h-[250px] w-auto aspect-[12/16] rounded-xl hover:scale-[101%] hover:rotate-[-2deg] transition-all"
         src={f_map}
         alt="first photo"
         onClick={handleMapClick}
@@ -26,7 +26,7 @@ export function PhotosBg({ className }: PhotoBgProps) {
         alt="second photo"
       /> */}
       <Image
-        className="absolute top-24 md:top-10 right-4 h-[150px] md:h-[250px] w-auto aspect-[12/16] rounded-xl"
+        className="absolute opacity-85 top-16 md:top-10 right-4 h-[180px] md:h-[250px] w-auto aspect-[12/16] rounded-xl"
         src={f_outside}
         alt="second photo"
       />

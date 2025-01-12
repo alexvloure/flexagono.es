@@ -2,12 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import { nohemiRegular } from "@/app/fonts";
-import { Germania_One } from "next/font/google";
-
-const germania_one = Germania_One({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 const Header = () => {
   const location = usePathname();
@@ -32,8 +26,10 @@ const Header = () => {
 
   return (
     <header className="h-16 fixed top-0 w-full z-[9999]">
-      <div className="h-full max-w-[95%] mx-auto px-2 flex justify-between items-center">
-        <h1 className={`text-[2rem] font-medium ${nohemiRegular.className}`}>
+      <div className="h-full max-w-[90%] md:max-w-[85%] mx-auto px-2 flex justify-between items-center">
+        <h1
+          className={`text-[1.2rem] md:text-[1.5rem] font-medium ${nohemiRegular.className}`}
+        >
           flexágono
         </h1>
         <nav>
