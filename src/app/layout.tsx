@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} max-w-full antialiased min-h-screen `}
+        className={`${montserrat.className} bg-background text-foreground max-w-full antialiased min-h-screen `}
       >
         <Header />
         <Providers>{children}</Providers>

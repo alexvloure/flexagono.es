@@ -12,7 +12,7 @@ const ParallaxImages = () => {
   };
 
   return (
-    <div className="relative flex w-[90%] md:w-[85%] mx-auto justify-center mt-24 md:mt-40">
+    <div className="relative flex w-[90%] md:w-[85%] mx-auto justify-center mt-32 md:mt-40">
       <Parallax
         startScroll={100}
         endScroll={300}

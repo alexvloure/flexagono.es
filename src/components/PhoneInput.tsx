@@ -1,15 +1,22 @@
-import { Button } from "./button";
-import { Input } from "./input";
+import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 
 type PhoneInputProps = {
   placeholder: string;
   buttonLabel: string;
   action: () => void;
+  className?: string;
 };
 
-const PhoneInput = ({ placeholder, buttonLabel, action }: PhoneInputProps) => {
+const PhoneInput = ({
+  placeholder,
+  buttonLabel,
+  action,
+  className,
+}: PhoneInputProps) => {
   return (
-    <div className="relative w-full max-w-sm">
+    <div className={cn(className, "relative w-full max-w-sm")}>
       <Input
         type="text"
         placeholder={placeholder}

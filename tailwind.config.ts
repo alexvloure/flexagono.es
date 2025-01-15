@@ -39,50 +39,7 @@ const config: Config = {
   },
   plugins: [
     plugin(function ({ addUtilities }: PluginAPI) {
-      addUtilities({
-        '.level-up::after': {
-          content: '""',
-          display: 'inline-block',
-          position: 'absolute',
-          top: '10%', /* Adjust position relative to text */
-          right: '-2rem', /* Adjust distance from text */
-          width: '24px',
-          height: '24px',
-          transform: 'translateY(-50%)',
-          backgroundImage: 'url(/level-up.svg)',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
-          color: 'black',
-        },
-        '.level-up-sm::after': {
-          content: '""',
-          display: 'inline-block',
-          position: 'absolute',
-          top: '10%', /* Adjust position relative to text */
-          right: '-3rem', /* Adjust distance from text */
-          width: '32px',
-          height: '32px',
-          transform: 'translateY(-50%)',
-          backgroundImage: 'url(/level-up.svg)',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
-          color: 'black',
-        },
-        '.level-up-md::after': {
-          content: '""',
-          display: 'inline-block',
-          position: 'absolute',
-          top: '10%', /* Adjust position relative to text */
-          right: '-3.5rem', /* Adjust distance from text */
-          width: '36px',
-          height: '36px',
-          transform: 'translateY(-50%)',
-          backgroundImage: 'url(/level-up.svg)',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
-          color: 'black',
-        },
-      });
+      addUtilities({});
     }),
       require("tailwindcss-animate")
 ],
