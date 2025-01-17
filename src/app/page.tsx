@@ -26,7 +26,7 @@ export default function Home() {
           <p className="text-center text-pretty font-[350] mt-2 max-w-[700px]">
             Descubre la ciencia{" "}
             <BeakerFlask className="inline rotate-[5deg] text-zinc-700" /> de
-            una forma sencilla! Con nuestro seguimiento personalizado{" "}
+            una forma sencilla. Con nuestro seguimiento personalizado{" "}
             <span className="hidden md:inline">
               y adaptado a tus necesidades,
             </span>{" "}
